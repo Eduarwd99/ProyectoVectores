@@ -11,7 +11,6 @@ namespace ProyectoVectores.clases
         public static int[] ordenaSeleccion(int[] vector, int tamanio)
         {
             int aux = 0;
-
             for(int i=0; i<tamanio;i++)
                 for(int j=i+1; j<tamanio; j++)
                     if(vector[i]>vector[j])

@@ -37,7 +37,7 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(157, 27);
+            this.txtNumero.Location = new System.Drawing.Point(108, 7);
             this.txtNumero.MaxLength = 4;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 20);
@@ -47,7 +47,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 30);
+            this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 1;
@@ -55,9 +55,9 @@
             // 
             // btnOrdenar
             // 
-            this.btnOrdenar.Location = new System.Drawing.Point(276, 25);
+            this.btnOrdenar.Location = new System.Drawing.Point(108, 33);
             this.btnOrdenar.Name = "btnOrdenar";
-            this.btnOrdenar.Size = new System.Drawing.Size(75, 23);
+            this.btnOrdenar.Size = new System.Drawing.Size(100, 23);
             this.btnOrdenar.TabIndex = 2;
             this.btnOrdenar.Text = "Ordenar";
             this.btnOrdenar.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 69);
+            this.label2.Location = new System.Drawing.Point(12, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 3;
@@ -75,16 +75,16 @@
             // lstOrdenado
             // 
             this.lstOrdenado.FormattingEnabled = true;
-            this.lstOrdenado.Location = new System.Drawing.Point(157, 54);
+            this.lstOrdenado.Location = new System.Drawing.Point(108, 62);
             this.lstOrdenado.Name = "lstOrdenado";
-            this.lstOrdenado.Size = new System.Drawing.Size(120, 95);
+            this.lstOrdenado.Size = new System.Drawing.Size(100, 108);
             this.lstOrdenado.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 182);
+            this.ClientSize = new System.Drawing.Size(220, 182);
             this.Controls.Add(this.lstOrdenado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnOrdenar);

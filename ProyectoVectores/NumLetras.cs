@@ -23,7 +23,8 @@ namespace ProyectoVectores
             string aux = "";
             if (num < 20)
                 aux = unidades[num];
-
+            else if (num < 100 && num >= 20) //tarea
+                aux = decenas[(num/10)-1];
             return aux;
         }
     }

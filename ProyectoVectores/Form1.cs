@@ -14,7 +14,7 @@ namespace ProyectoVectores
 {
     public partial class Form1 : Form
     {
-        List<int> listavector = new List<int>();
+        //List<int> listavector = new List<int>();
 
         const int MAX = 100;
         private int[] vector = new int[MAX];
@@ -32,9 +32,9 @@ namespace ProyectoVectores
                 {
                     if(contador < MAX)
                     {
-                        listavector.Add(num);
-                        lstOrdenado.DataSource = null;
-                        lstOrdenado.DataSource = listavector;
+                        this.lstOrdenado.Items.Add(num);
+                        //lstOrdenado.DataSource = null;
+                        //lstOrdenado.DataSource = listavector;
                         vector[contador] = num;
                         contador ++;                        
                     }
@@ -52,10 +52,10 @@ namespace ProyectoVectores
         {
             int[] x = clases.Ordenacion.ordenaSeleccion(vector, contador);
 
-            lstOrdenado.Items.Clear();
+            this.lstOrdenado.Items.Clear();
             for(int i=0; i<contador; i++)
             {
-                this.lstOrdenado.Items.Add(x[1]);
+                this.lstOrdenado.Items.Add(x[i]);
             }
             //lstOrdenado.DataSource = null;
             //lstOrdenado.DataSource = x;

@@ -37,7 +37,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 29);
+            this.label1.Location = new System.Drawing.Point(11, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 13);
             this.label1.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(205, 26);
+            this.txtNumero.Location = new System.Drawing.Point(204, 12);
             this.txtNumero.MaxLength = 7;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 20);
@@ -55,7 +55,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 58);
+            this.label2.Location = new System.Drawing.Point(11, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 13);
             this.label2.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             // txtResultado
             // 
-            this.txtResultado.Location = new System.Drawing.Point(12, 74);
+            this.txtResultado.Location = new System.Drawing.Point(11, 60);
             this.txtResultado.Multiline = true;
             this.txtResultado.Name = "txtResultado";
             this.txtResultado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -74,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 221);
+            this.ClientSize = new System.Drawing.Size(316, 185);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNumero);
