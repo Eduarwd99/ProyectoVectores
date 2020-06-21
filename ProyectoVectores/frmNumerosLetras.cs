@@ -24,9 +24,20 @@ namespace ProyectoVectores
                 if (int.TryParse(this.txtNumero.Text, out int num))
                 {
                     this.txtResultado.Text = NumLetras.getLetras(num);
+                    this.txtNumNLetras.Text = this.txtNumero.Text;
                     this.txtNumero.Text = "";
                 }
+                else
+                {
+                    MessageBox.Show("Los digitos ingresados no son validos...");
+                    this.txtNumero.Focus();
+                }
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

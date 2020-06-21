@@ -32,6 +32,7 @@
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
+            this.txtNumNLetras = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -55,26 +56,37 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 44);
+            this.label2.Location = new System.Drawing.Point(11, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 13);
+            this.label2.Size = new System.Drawing.Size(256, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "El numero en letras es:";
+            this.label2.Text = "El numero                                     escrito en letras es:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtResultado
             // 
-            this.txtResultado.Location = new System.Drawing.Point(11, 60);
+            this.txtResultado.Location = new System.Drawing.Point(11, 63);
             this.txtResultado.Multiline = true;
             this.txtResultado.Name = "txtResultado";
             this.txtResultado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtResultado.Size = new System.Drawing.Size(293, 112);
+            this.txtResultado.Size = new System.Drawing.Size(293, 55);
             this.txtResultado.TabIndex = 3;
+            // 
+            // txtNumNLetras
+            // 
+            this.txtNumNLetras.Location = new System.Drawing.Point(66, 37);
+            this.txtNumNLetras.MaxLength = 7;
+            this.txtNumNLetras.Name = "txtNumNLetras";
+            this.txtNumNLetras.ReadOnly = true;
+            this.txtNumNLetras.Size = new System.Drawing.Size(100, 20);
+            this.txtNumNLetras.TabIndex = 4;
             // 
             // frmNumerosLetras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 185);
+            this.ClientSize = new System.Drawing.Size(313, 126);
+            this.Controls.Add(this.txtNumNLetras);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNumero);
@@ -92,5 +104,6 @@
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtResultado;
+        private System.Windows.Forms.TextBox txtNumNLetras;
     }
 }

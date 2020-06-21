@@ -52,35 +52,78 @@ namespace ProyectoVectores
 
         public static string getMilesimas(int num)
         {
-            int num1 = 0, num2 = 0;
+            int num0, num1, num2;
             string numS1 = num.ToString();
             string numS2 = num.ToString();
-            string aux1 = "", aux2 = "";
+            string numS0 = num.ToString();
+            string aux0 = "", aux1 = "", aux2 = "";
 
-            num1 = int.Parse(numS1.Substring(0, 2));
-            num2 = int.Parse(numS2.Substring(3, 5));
+            if(num>=1000 && num<10000)
+            {
+                int.TryParse(numS1.Substring(0, 1), out num1);
+                aux1 = getMax999(num1) + " Mil ";
+                if (num1 == 1)
+                    aux1 = "Mil ";
 
-            if (num1 < 20)
-                aux1 = getUnidades(num1);
-            else if (num1 >= 20 && num1 < 100)
-                aux1 = getDecenas(num1);
-            else if (num1 >= 100 && num1 < 1000)
-                aux1 = getCentenas(num1);
+                int.TryParse(numS2.Substring(1, 3), out num2);
+                aux2 = getMax999(num2);
+                if (num2 == 0)
+                    aux2 = "";
 
-            if (num2 < 20)
-                aux2 = getUnidades(num2);
-            else if (num2 >= 20 && num2 < 100)
-                aux2 = getDecenas(num2);
-            else if (num2 >= 100 && num2 < 1000)
-                aux2 = getCentenas(num2);
+                return aux1 + aux2;
+            }
+            else if(num >= 10000 && num < 100000)
+            {
+                int.TryParse(numS1.Substring(0, 2), out num1);
+                aux1 = getMax999(num1) + " Mil ";
+                if (num1 == 1)
+                    aux1 = "Mil ";
 
-            if (num2 == 0)
-                aux2 = "";
+                int.TryParse(numS2.Substring(2, 3), out num2);
+                aux2 = getMax999(num2);
+                if (num2 == 0)
+                    aux2 = "";
 
-            return aux1 + " Mil  " + aux2;
+                return aux1 + aux2;
+            }
+            else if (num >= 100000 && num < 1000000)
+            {                
+                int.TryParse(numS1.Substring(0, 3), out num1);
+                aux1 = getMax999(num1) + " Mil ";
+                if (num1 == 1)
+                    aux1 = "Mil ";
+
+                int.TryParse(numS2.Substring(3, 3), out num2);
+                aux2 = getMax999(num2);
+                if (num2 == 0)
+                    aux2 = "";
+
+                return aux1 + aux2;
+            }
+            else
+            {                
+                int.TryParse(numS0.Substring(0, 1), out num0);
+                aux0 = getMax999(num0) + " Millon ";
+                if (num0 == 1)
+                    aux0 = "Un Millon ";
+
+                int.TryParse(numS1.Substring(1, 3), out num1);
+                aux1 = getMax999(num1) + " Mil ";
+                if (num1 == 0)
+                    aux1 = "";
+                if (num1 == 1)
+                    aux1 = "Mil ";
+
+                int.TryParse(numS2.Substring(4, 3), out num2);
+                aux2 = getMax999(num2);
+                if (num2 == 0)
+                    aux2 = "";
+
+                return aux0 + aux1 + aux2;
+            }
         }
 
-        public static string getLetras(int num)
+        public static string getMax999(int num)
         {
             string aux = "";
             if (num < 20)
@@ -89,12 +132,20 @@ namespace ProyectoVectores
                 aux = getDecenas(num);
             else if (num >= 100 && num < 1000)
                 aux = getCentenas(num);
-            else if (num >= 1000 && num < 1000000)
+            return aux;
+        }
+
+        public static string getLetras(int num)
+        {
+            string aux = "";
+            if(num > 0 && num < 1000)
+                aux = getMax999(num);
+            else if(num >= 1000)
                 aux = getMilesimas(num);
-
-            if(num == 0)
+            else if(num == 0)
                 aux = "Cero";
-
+            else if(num < 0 || num > 9999999)
+                aux = "ERROR : El numero ingresado no pertenece al conjunto establecido (0 - 9999999)";
             return aux;
         }
     }
