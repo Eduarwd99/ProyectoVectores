@@ -60,5 +60,10 @@ namespace ProyectoVectores
             //lstOrdenado.DataSource = null;
             //lstOrdenado.DataSource = x;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

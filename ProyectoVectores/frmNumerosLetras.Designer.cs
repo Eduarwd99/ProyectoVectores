@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.txtNumNLetras = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -81,11 +82,22 @@
             this.txtNumNLetras.Size = new System.Drawing.Size(100, 20);
             this.txtNumNLetras.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(83, 124);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Cerrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmNumerosLetras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 126);
+            this.ClientSize = new System.Drawing.Size(313, 156);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtNumNLetras);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.label2);
@@ -105,5 +117,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.TextBox txtNumNLetras;
+        private System.Windows.Forms.Button button1;
     }
 }

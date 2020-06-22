@@ -64,12 +64,10 @@ namespace ProyectoVectores
                 aux1 = getMax999(num1) + " Mil ";
                 if (num1 == 1)
                     aux1 = "Mil ";
-
                 int.TryParse(numS2.Substring(1, 3), out num2);
                 aux2 = getMax999(num2);
                 if (num2 == 0)
                     aux2 = "";
-
                 return aux1 + aux2;
             }
             else if(num >= 10000 && num < 100000)
@@ -78,12 +76,10 @@ namespace ProyectoVectores
                 aux1 = getMax999(num1) + " Mil ";
                 if (num1 == 1)
                     aux1 = "Mil ";
-
                 int.TryParse(numS2.Substring(2, 3), out num2);
                 aux2 = getMax999(num2);
                 if (num2 == 0)
                     aux2 = "";
-
                 return aux1 + aux2;
             }
             else if (num >= 100000 && num < 1000000)
@@ -92,12 +88,10 @@ namespace ProyectoVectores
                 aux1 = getMax999(num1) + " Mil ";
                 if (num1 == 1)
                     aux1 = "Mil ";
-
                 int.TryParse(numS2.Substring(3, 3), out num2);
                 aux2 = getMax999(num2);
                 if (num2 == 0)
                     aux2 = "";
-
                 return aux1 + aux2;
             }
             else
@@ -106,19 +100,16 @@ namespace ProyectoVectores
                 aux0 = getMax999(num0) + " Millon ";
                 if (num0 == 1)
                     aux0 = "Un Millon ";
-
                 int.TryParse(numS1.Substring(1, 3), out num1);
                 aux1 = getMax999(num1) + " Mil ";
                 if (num1 == 0)
                     aux1 = "";
                 if (num1 == 1)
                     aux1 = "Mil ";
-
                 int.TryParse(numS2.Substring(4, 3), out num2);
                 aux2 = getMax999(num2);
                 if (num2 == 0)
                     aux2 = "";
-
                 return aux0 + aux1 + aux2;
             }
         }

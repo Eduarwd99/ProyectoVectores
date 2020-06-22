@@ -16,7 +16,7 @@ namespace ProyectoVectores
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNumerosLetras());
+            Application.Run(new frmLogin());
         }
     }
 }
