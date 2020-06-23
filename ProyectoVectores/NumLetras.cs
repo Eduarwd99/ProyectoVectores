@@ -97,7 +97,7 @@ namespace ProyectoVectores
             else
             {                
                 int.TryParse(numS0.Substring(0, 1), out num0);
-                aux0 = getMax999(num0) + " Millon ";
+                aux0 = getMax999(num0) + " Millones ";
                 if (num0 == 1)
                     aux0 = "Un Millon ";
                 int.TryParse(numS1.Substring(1, 3), out num1);
